@@ -14,7 +14,7 @@
       $("#login").on("click", function(e) {
         e.preventDefault();
         var authenticator = new netlify.default ({});
-        authenticator.authenticate({provider:"github", scope: "user"}, function(err, data) {
+        authenticator.authenticate({provider:"google", scope: "user"}, function(err, data) {
           if (err) {
             return $("#output").text("Error Authenticating with GitHub: " + err);
           }
